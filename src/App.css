@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url("file:///E:/React%20file/Weather%20app/weatherapp/public/hyj.avif") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow: hidden; /* Ensure no overflow from animations */
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff7e67;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff5035;
+}
+
+.error {
+  color: #ff4c4c;
+  margin-top: 10px;
+}
+
+.weather-info {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.weather-info h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.weather-info p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+/* Weather animation: Snow Effect */
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(20px);
+    opacity: 0.1;
+  }
+}
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+.snowflake:nth-child(1) {
+  left: 10%;
+  animation-duration: 5s;
+  animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+  left: 25%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.snowflake:nth-child(3) {
+  left: 40%;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+.snowflake:nth-child(4) {
+  left: 60%;
+  animation-duration: 6s;
+  animation-delay: 3s;
+}
+
+.snowflake:nth-child(5) {
+  left: 80%;
+  animation-duration: 5s;
+  animation-delay: 4s;
+}
